@@ -1,0 +1,164 @@
+/* -------------
+Declaring fonts  
+----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@500&family=Work+Sans:wght@500&display=swap');
+body{
+font-family: 'Work Sans', sans-serif;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*-----------------
+ Nav bar styles 
+ ------------------*/
+ .header{
+    background-color: rgba(255, 144, 14, 0.1);
+ }
+ .navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.8rem 7rem;
+ }
+ .navigation h2{
+    font-size: 30px;
+ }
+ .nav-options{
+    display: flex;
+    gap: 45px;
+    list-style: none;
+}
+.nav-options li{
+    color: #424242;
+}
+
+/*--------------------
+ Header section styles 
+ ----------------------*/
+
+.introduction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.introduction h1{
+    font-size: 40px;
+}
+.introduction p{
+    width: 60%;
+}
+.common-para{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #727272;
+
+}
+.input-btn{
+    font-weight: 700;
+    border: none;
+    border-radius: 7px;
+    padding: 15px 24px;
+    margin-bottom: 50px;
+    color: white;
+    background-color: #FF900E;
+}
+.introduction img{
+    width: 60%;
+    height: 50%;
+    padding-bottom: 60px;
+}
+
+/* -----------------------
+Quick list Features styles 
+--------------------------*/
+
+.team-section{
+    display: flex;
+    align-items: center;
+}
+.grid-parent{
+    margin-left: 7%;
+}
+.for-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5pxs;
+}
+.feature-lists-detail, .for-grid{
+    flex: 2;
+}
+.feature-lists-detail h1{
+    font-size: 30px
+}
+.for-grid img{
+    width: 70%;
+}
+/* ------------------------------------
+Features you will love & enjoy style  
+--------------------------------------*/
+.top-features-section{
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+}
+.top-features-section img{
+    width: 85%;
+    height: 80%;
+}
+.top-features{
+    display: flex;
+    gap: 40px;
+    width: 85%;
+}
+.line-style{
+    display: flex;
+}
+.line{
+    border: 2px solid #FF900E;
+    margin-right: 20px;
+}
+.top-feature-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* height: 80%; */
+}
+.top-feature-detail, .top-features-img{
+    flex: 2;
+}
+.top-feature-para{
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #727272;
+}
+.box-shadow{
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+}
+.box-shadow h4{
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+.box-shadow p{
+    color: #727272;
+}
+.under-box-shadow{
+    padding: 18px 15px;
+}
+.architect{
+    position: relative;
+}
+.absolute{
+    font-size: 35px;
+    background-color: #FF900E;
+    padding: 25px 30px;
+    border: none;
+    border-radius: 7px;
+    position: absolute;
+    top: 130rem;
+    right: 28rem;
+
+}   
