@@ -162,3 +162,16 @@ Features you will love & enjoy style
     right: 28rem;
 
 }   
+
+/* -----------------
+    Facts section
+--------------------*/
+.facts{
+    text-align: start;
+}
+.facts-title{
+    font-size: 28px;
+}
+.facts p{
+    color:  #727272;
+}
