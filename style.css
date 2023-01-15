@@ -41,7 +41,7 @@ body {
 }
 
 .navigation h2 {
-    font-size: 30px;
+    font-size: 26px;
 }
 
 .nav-options {
@@ -63,6 +63,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 100px;
 }
 
 .introduction h1 {
@@ -79,9 +80,6 @@ body {
     color: #727272;
 
 }
-
-
-
 .introduction img {
     width: 60%;
     height: 50%;
@@ -93,22 +91,24 @@ Quick list Features styles
 --------------------------*/
 
 .team-section {
+    
     display: flex;
+    justify-content: center;
+}
+.quick-list{
+    
+    display: flex;
+    gap: 25px;
     align-items: center;
+     width: 80%;
 }
-
-.grid-parent {
-    margin-left: 7%;
-}
-
 .for-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 5pxs;
+    row-gap: 18px;
 }
 
-.feature-lists-detail,
-.for-grid {
+.feature-lists-detail, .grid-parent {
     flex: 2;
 }
 
@@ -117,7 +117,7 @@ Quick list Features styles
 }
 
 .for-grid img {
-    width: 70%;
+    width: 90%;
 }
 
 /* ------------------------------------
@@ -153,7 +153,6 @@ Features you will love & enjoy style
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* height: 80%; */
 }
 
 .top-feature-detail,
@@ -185,20 +184,28 @@ Features you will love & enjoy style
     padding: 18px 15px;
 }
 
-.architect {
-    position: relative;
-}
-
-.absolute {
-    font-size: 35px;
+.relative {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
     background-color: #FF900E;
-    padding: 25px 30px;
+    padding: 25px 10px;
     border: none;
     border-radius: 7px;
-    position: absolute;
-    top: 130rem;
-    right: 28rem;
+    margin-right: 23rem;
 
+}
+/* .architect{
+    position: relative;
+} */
+.relative input{
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+    background-color: #FF900E;
+    border: none;
 }
 
 /*------------------------
@@ -217,7 +224,9 @@ Features you will love & enjoy style
     gap: 60px;
     width: 80%;
 }
-
+.achieve-img{
+    width: 100%;
+}
 .achieve-img img {
     width: 100%;
     border-radius: 10px;
@@ -246,7 +255,6 @@ Features you will love & enjoy style
 }
 
 .facts {
-    /* text-align: start; */
     margin-bottom: 100px;
     width: 85%;
     align-items: center;
@@ -265,6 +273,41 @@ Features you will love & enjoy style
 /* ---------------
     Icons style 
 ------------------ */
+.animation{
+    height: 30px;
+    width: 30px;
+    background-color: #FF900E;
+    border-radius: 15px;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: ball ease-in 2s 0.1s alternate infinite;
+    animation-play-state: running;
+    display: none;
+    
+}
+.icons:hover .animation{
+        display: block;
+}
+@keyframes ball {
+    0% {
+        left: 0;
+        top: 0;
+        background-color: #FF900E;
+    }
+    50% {
+        left: 50%;
+        top: 125px;
+        background-color: #6e4d28;
+    }
+    100%{
+        top: 0;
+        left: 87%;
+        background-color: #FF900E;
+    }
+}
+
 .icons-parent {
     display: flex;
     justify-content: center;
@@ -285,7 +328,11 @@ Features you will love & enjoy style
     padding: 20px;
     width: 15%;
     height: 150px;
+    position: relative;
+
+    
 }
+
 
 .icons h3 {
     font-size: 25px;
@@ -299,6 +346,7 @@ Features you will love & enjoy style
 h3 {
     margin-bottom: 10px;
 }
+
 
 /* -----------------------------
      Sponsors section styles 
@@ -372,3 +420,76 @@ footer p {
     padding: 25px 100px;
 
 }
+
+
+/* =====================
+    For responsive 
+   ====================*/
+
+   @media screen and (max-width: 576px) {
+        .navigation{
+            flex-direction: column;
+            gap: 30px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    .nav-options{
+            flex-direction: column;
+        }
+        .introduction h1{
+            padding: 0 5px;
+        }
+        .quick-list{
+            flex-direction: column;
+        }
+        .for-grid{
+            grid-template-columns: 1fr;
+        }
+        .feature-lists-detail{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .top-features{
+            flex-direction: column;
+        }
+        .achieve-under-parent{
+            flex-direction: column-reverse;
+        }
+        .another-btn{
+            margin-bottom: 10px;
+        }
+        .relative{
+            width: 200px;
+            margin-bottom: 150px;
+        }
+        .facts{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .icons-parent{
+            flex-direction: column;
+            gap: 25px;
+        }
+        .icons{
+            width: 70%;
+        }
+        .sponsors-des{
+            width: 100%;
+        }
+        .sponsors-img{
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+        .sponsors-img img{
+            width: 30%;
+        }
+        footer div{
+            width: 100%;
+        }
+        footer p{
+            padding: 25px 0;
+        }
+   }
